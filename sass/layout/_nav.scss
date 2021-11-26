@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em 5em 0 0;
+  width: 100%;
+}
+
+nav img{
+  width: 58%;
+}
+nav i {
+  transform: scale(1.2);
+  font-size: 4vw;
+}
