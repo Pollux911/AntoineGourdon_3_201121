@@ -1,0 +1,17 @@
+@function pastel($clr){
+  $hue: hue($clr);
+  $sat: 70%;
+  $light: 95%;
+  $pastel: hsl($hue,$sat,$light);
+
+  @return $pastel;
+}
+
+@function darksaturated($clr){
+  $hue: hue($clr);
+  $sat: 90%;
+  $light: 30%;
+  $drkstrtd: hsl($hue,$sat,$light);
+
+  @return $drkstrtd;
+}

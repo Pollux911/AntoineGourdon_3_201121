@@ -1,0 +1,40 @@
+.search-bar{
+  background: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vh 0;
+  -webkit-box-shadow: inset 0 5px 5px -3px #CFCFCF;
+  box-shadow: inset 0 5px 5px -3px #CFCFCF;
+  input{
+    border: none;
+    background: #EAEAEA;
+    padding-left: 4vw;
+    font-size: 4vw;
+    &::placeholder {
+      color: #353535;
+    }
+  }
+  i{
+    color:#353535;
+    padding-left: 10vw;
+  }
+
+}
+
+.btn-grad {background-image: linear-gradient(to right, #603813 0%, #b29f94  51%, #603813  100%)}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+
+

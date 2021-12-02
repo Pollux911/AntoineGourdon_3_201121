@@ -12,61 +12,126 @@
 
 <header>
     <nav>
-         <i class="fas fa-arrow-left"></i>
-         <img src="images/logo/ohmyfood.png" alt="Logo Ohmyfood"/>
+        <a class="back-btn" href="index.html"><i class="fas fa-arrow-left"></i></a>
+        <a class="home-btn" href="index.html"><img src="images/logo/ohmyfood.png" alt="Logo Ohmyfood"/></a>
     </nav>
 </header>
 
 <main>
 
-    <section> <!--Menu-->
-        <img src="" alt="">
-
-        <h1></h1>
-
-        <i></i>
-
-        <div>
-            <h2></h2>
-            <div>
-                <h3></h3>
-                <p></p>
-                <span></span>
+    <section class="menu"> <!--Menu-->
+        <div class="menu__img">
+            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+            <div class="menu-heading">
+                <h1>À la française</h1>
+                <i class="far fa-heart fa-lg"></i>
             </div>
-        </div>
 
-        <div>
-            <h2></h2>
-            <div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
-        </div>
-
-        <div>
-            <h2></h2>
-            <div>
-                <h3></h3>
-                <p></p>
-                <span></span>
-            </div>
         </div>
 
 
+        <div class="menu-parts">
+            <h2>Entrées</h2>
+            <div class="small-card">
+                <div class="small-card__name">
+                    <h3>Tartare de poulpe acidulé</h3>
+                    <p>Aux zestes d'orange</p>
+                </div>
+                <div class="small-card__price">
+                    <span>25€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Velouté de légumes d'antan</h3>
+                    <p>Carotte, panais, topinambour</p>
+                </div>
+                <div class="small-card__price">
+                    <span>35€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Soupe à l'oignon</h3>
+                    <p>Revisitée</p>
+                </div>
+                <div class="small-card__price">
+                    <span>20€</span>
+                </div>
+            </div>
 
-        <button type="button">Commander</button>
+        </div>
+
+        <div class="menu-parts">
+            <h2>Plats</h2>
+            <div class="small-card">
+                <div class="small-card__name">
+                    <h3>Coquilles Saint-Jacques</h3>
+                    <p>Accompagnées d'une purée de panais</p>
+                </div>
+                <div class="small-card__price">
+                    <span>40€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Magret de canard</h3>
+                    <p>Et parmentier de pommes de terrer</p>
+                </div>
+                <div class="small-card__price">
+                    <span>35€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                    <p>Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <div class="small-card__price">
+                    <span>44€</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu-parts">
+            <h2>Desserts</h2>
+            <div class="small-card">
+                <div class="small-card__name">
+                    <h3>Pétales de violettes glacés</h3>
+                    <p>Et purée de noisettes</p>
+                </div>
+                <div class="small-card__price">
+                    <span>18€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Fondant au chocolat</h3>
+                    <p>Revisité</p>
+                </div>
+                <div class="small-card__price">
+                    <span>22€</span>
+                </div>
+            </div><div class="small-card">
+                <div class="small-card__name">
+                    <h3>Millefeuille croustillant</h3>
+                    <p>Myrtilles et pâte d’amande</p>
+                </div>
+                <div class="small-card__price">
+                    <span>23€</span>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn--gradient btn--shadow btn-order" type="button">Commander</button>
 
     </section>
 
 </main>
 
 <footer>
-    <img src="#" alt="#">
+    <img class="footer__image" src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
     <ul>
-        <li><i></i></li>
-        <li><i></i></li>
-        <li></li>
-        <li></li>
+        <li><i class="fas fa-utensils fa-fw fa-sm"></i>Proposer un restaurant</li>
+        <li><i class="fas fa-hands-helping fa-fw fa-xs"></i>Devenir partenaire</li>
+        <li>Mentions légales</li>
+        <li>Contact</li>
     </ul>
 </footer>

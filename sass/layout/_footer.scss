@@ -1,0 +1,28 @@
+footer{
+  background:#353535;
+  height: 100%;
+  margin: 0;
+  img{
+      filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(251deg) brightness(106%) contrast(100%);
+      width: 25%;
+      height: auto;
+      padding-top: 6vw;
+      @include base-margin;
+    }
+  ul{
+    padding-left: 6vw;
+    padding-bottom: 6vw;
+    margin-bottom: 0;
+  }
+  li{
+    list-style: none;
+    color: white;
+    padding-bottom: 2vw;
+    i{
+      color: white;
+      padding-right: 6vw ;
+    }
+  }
+}
+
+

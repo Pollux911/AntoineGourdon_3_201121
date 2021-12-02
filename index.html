@@ -10,80 +10,142 @@
     <title>Ohmyfood</title>
 </head>
 <header>
-    <nav>
-        <a href="index.html"><img src="images/logo/ohmyfood.png" alt="ohmyfood logo"/></a>
+    <nav class="home-nav">
+        <a class="home-btn" href="index.html"><img src="images/logo/ohmyfood.png" alt="ohmyfood logo" /></a>
     </nav>
 
 
-    <form method="post" action="#">
+    <form method="post" action="#" class="search-bar">
         <i class="fas fa-map-marker-alt"></i> <!-- Geo Marker -->
         <label  for="search"></label>
-        <input type="text" name="search"
-               id="search" placeholder="Paris, Belleville"> <!-- Disabled Searching Field  -->
+        <input type="text" name="search" tabindex="-1"
+               id="search" placeholder="Paris, Belleville" disabled> <!-- Disabled Searching Field  -->
     </form>
 
 </header>
-<main>
-    <section> <!--Intro-->
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button type="button">Explorer nos restaurants</button>
-    </section>
+<body>
+    <main>
+        <section class="intro"> <!--Intro-->
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <button class="btn btn--gradient btn--shadow" type="button">Explorer nos restaurants</button>
+        </section>
 
-    <section> <!--Getting started-->
-        <h2>Fonctionnement</h2>
+        <section class="operating"> <!--Getting started/Operating-->
+            <h2>Fonctionnement</h2>
 
-        <div></div>
-        <div></div>
-        <div></div>
+            <ol>
+                <li class="btn--shadow"><i class="fas fa-mobile-alt fa-fw fa-lg"></i>Choisissez un restaurant</li>
+                <li class="btn--shadow"><i class="fas fa-list-ul fa-fw fa-lg"></i>Composez votre menu</li>
+                <li class="btn--shadow"><i class="fas fa-store fa-fw fa-1x"></i>Dégustez au restaurant</li>
+            </ol>
 
-    </section>
+        </section>
 
-    <section> <!--Restaurants-->
-        <h2>Restaurants</h2>
-        <div> <!--Card Container-->
+        <section class="restaurants"> <!--Restaurants-->
+            <h2>Restaurants</h2>
+            <div class="card-container"> <!--Card Container-->
 
-            <div>
-                <img src="" alt="La palette du goût">
-                <div class="new"></div>
-                <h3></h3>
-                <p></p>
-                <i></i>
-            </div>
+                <div class="card">
+                    <a href="#">
 
-            <div>
-                <img src="" alt="La note enchantée">
-                <div class="new"></div>
-                <h3></h3>
-                <p></p>
-                <i></i>
-            </div>
+                        <div class="card__card-img">
+                            <img  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                  alt="La palette du goût">
 
-            <div>
-                <img src="" alt="À la française">
 
-                <h3></h3>
-                <p></p>
-                <i></i>
-            </div>
-            <div>
-                <img src="" alt="Le délice des sens">
+                        </div>
+                        <div class="card--new">
+                            <span>Nouveau</span>
+                        </div>
 
-                <h3></h3>
-                <p></p>
-                <i></i>
-            </div>
-         </div>
+                        <div class="card-body">
+                            <div class="card-body__card-name">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
 
-    </section>
-</main>
+                    </a>
+                </div>
 
-<footer>
-    <img src="images/logo/ohmyfood@2x.svg" alt="#">
-    <ul>
-        <li><i></i></li>
-        <li><i></i></li>
-        <li></li>
-        <li></li>
-    </ul>
-</footer>
+                <div class="card">
+                    <a href="#">
+
+                        <div class="card__card-img">
+                            <img  src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                  alt="La note enchantée">
+
+
+                        </div>
+                        <div class="card--new">
+                            <span>Nouveau</span>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-body__card-name">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#">
+
+                        <div class="card__card-img">
+                            <img  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                  alt="À la française">
+
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-body__card-name">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#">
+
+                        <div class="card__card-img">
+                            <img  src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                  alt="Le délice des sens">
+
+                        </div>
+
+                        <div class="card-body">
+                            <div class="card-body__card-name">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+
+                    </a>
+                </div>
+             </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <img class="footer__image" src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
+
+        <ul>
+            <li><i class="fas fa-utensils fa-fw fa-sm"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping fa-fw fa-xs"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
+</body>

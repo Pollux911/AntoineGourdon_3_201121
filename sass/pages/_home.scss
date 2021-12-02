@@ -1,0 +1,79 @@
+.home-nav {
+  justify-content: center;
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw 15vw;
+  text-align: center;
+
+  h1{
+    font-size:6.5vw;
+    margin-bottom: 0;
+  }
+
+  p{
+    font-size: 4vw;
+  }
+}
+
+.operating{
+  h2 {
+    @include base-margin;
+  }
+  ol {
+    list-style: none;
+    counter-reset: li;
+    padding: 0 7vw 0 7vw;
+
+    li {
+      counter-increment: li;
+      font-size: 4vw;
+      background: $color-grey;
+      border-radius: 5vw;
+      padding: 6.5vw;
+      margin-bottom: 6vw;
+      &:before {
+        content: counter(li);
+        list-style-position: outside;
+        color: white;
+        text-align: center;
+        background: $color-primary;
+        display: inline-block;
+        width: 6.5vw;
+        height: 6.5vw;
+        line-height: 6.5vw;
+        font-size: 3.5vw;
+        border-radius: 15vw;
+        margin-left: -4vw;
+        transform: translateX(-6vw);
+      }
+      i{
+        color:#7E7E7E;
+        padding-right: 9vw;
+        }
+      &:hover, &:active{
+        background: pastel($color-primary);
+        i{
+          color: $color-primary;
+        }
+      }
+
+    }
+  }
+}
+
+.restaurants{
+  background: $color-grey;
+  margin-bottom: 0;
+  padding-bottom: 10vw;
+  h2 {
+    @include base-margin;
+    margin-top: 0;
+    padding-top: 10vw;
+  }
+
+}

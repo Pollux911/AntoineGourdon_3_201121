@@ -1,0 +1,36 @@
+.menu {
+  background: $color-grey;
+  padding-bottom: 20vw;
+  &__img{
+    position: relative;
+    width: 100%;
+    height: 258px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.menu-heading{
+  @include title-font;
+  padding: 0 10vw 0 4vw;
+  border-radius: 10vw 10vw 0 0;
+  position: relative;
+  bottom: 15vw;
+  width: 100%;
+  background: $color-grey;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-parts{
+
+  h2{
+    margin-left: 6vw;
+    margin-top: 8vw;
+    border-bottom: 1vw solid;
+    border-image: linear-gradient(to right, $color-tertiary 13%, $color-grey 13%) 100% 1;
+  }
+}
