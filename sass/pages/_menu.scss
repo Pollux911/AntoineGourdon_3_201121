@@ -1,0 +1,63 @@
+.menu {
+  background: $color-grey;
+  padding-bottom: 20vw;
+  &__img{
+    position: relative;
+    width: 100%;
+    height: 258px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.menu__heading{
+  @include title-font;
+  padding: 0 10vw 0 4vw;
+  border-radius: 10vw 10vw 0 0;
+  position: relative;
+  bottom: 15vw;
+  width: 100%;
+  background: $color-grey;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__parts{
+  opacity: 0;
+  animation: fadein $anim-dur forwards cubic-bezier(.12,1.03,.7,.93);
+  @for $i from 1 through $num-menu-parts {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+  h2{
+    margin-left: 6vw;
+    margin-top: 8vw;
+    border-bottom: 1vw solid;
+    border-image: linear-gradient(to right, $color-tertiary 13%, $color-grey 13%) 100% 1;
+  }
+}
+.small-card{              /*Fadein animation @ loading*/
+  opacity: 0;
+  animation: fadein $anim-dur forwards cubic-bezier(.58,.19,.42,.83);
+  @for $i from 1 through $num-small-card {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+}
+@keyframes fadein{
+  0%{
+    opacity: 0;
+    transform: translate(0, 5vh);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+}

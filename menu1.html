@@ -19,20 +19,24 @@
 
 <main>
 
-    <section class="menu"> <!--Menu-->
+    <section class="menu"> <!--MENU SECTION-->
         <div class="menu__img">
             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
-            <div class="menu-heading">
+            <div class="menu__heading">
                 <h1>À la française</h1>
-                <i class="far fa-heart fa-lg"></i>
+                <span class="fa-stack fa-lg hearts">
+                    <i class="fas fa-heart fa-stack-1x filled-heart"></i>
+                    <i class="far fa-heart fa-stack-1x empty-heart"></i>
+                </span>
             </div>
 
         </div>
 
 
-        <div class="menu-parts">
+        <div class="menu__parts menu__parts--1">
             <h2>Entrées</h2>
-            <div class="small-card">
+
+            <div class="small-card small-card--1">
                 <div class="small-card__name">
                     <h3>Tartare de poulpe acidulé</h3>
                     <p>Aux zestes d'orange</p>
@@ -40,7 +44,12 @@
                 <div class="small-card__price">
                     <span>25€</span>
                 </div>
-            </div><div class="small-card">
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="small-card small-card--2">
                 <div class="small-card__name">
                     <h3>Velouté de légumes d'antan</h3>
                     <p>Carotte, panais, topinambour</p>
@@ -48,7 +57,12 @@
                 <div class="small-card__price">
                     <span>35€</span>
                 </div>
-            </div><div class="small-card">
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="small-card small-card--3">
                 <div class="small-card__name">
                     <h3>Soupe à l'oignon</h3>
                     <p>Revisitée</p>
@@ -56,13 +70,17 @@
                 <div class="small-card__price">
                     <span>20€</span>
                 </div>
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
 
         </div>
 
-        <div class="menu-parts">
+        <div class="menu__parts menu__parts--2">
             <h2>Plats</h2>
-            <div class="small-card">
+
+            <div class="small-card small-card--1">
                 <div class="small-card__name">
                     <h3>Coquilles Saint-Jacques</h3>
                     <p>Accompagnées d'une purée de panais</p>
@@ -70,7 +88,12 @@
                 <div class="small-card__price">
                     <span>40€</span>
                 </div>
-            </div><div class="small-card">
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="small-card small-card--2">
                 <div class="small-card__name">
                     <h3>Magret de canard</h3>
                     <p>Et parmentier de pommes de terrer</p>
@@ -78,7 +101,12 @@
                 <div class="small-card__price">
                     <span>35€</span>
                 </div>
-            </div><div class="small-card">
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+
+            <div class="small-card small-card--3">
                 <div class="small-card__name">
                     <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                     <p>Sur son lit de gnocchis aux légumes</p>
@@ -86,21 +114,28 @@
                 <div class="small-card__price">
                     <span>44€</span>
                 </div>
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
 
         </div>
 
-        <div class="menu-parts">
+        <div class="menu__parts menu__parts--3">
             <h2>Desserts</h2>
-            <div class="small-card">
+            <div class="small-card small-card--1">
                 <div class="small-card__name">
                     <h3>Pétales de violettes glacés</h3>
                     <p>Et purée de noisettes</p>
                 </div>
                 <div class="small-card__price">
                     <span>18€</span>
+                    <div class="small-card--selected">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
                 </div>
-            </div><div class="small-card">
+            </div>
+            <div class="small-card small-card--2">
                 <div class="small-card__name">
                     <h3>Fondant au chocolat</h3>
                     <p>Revisité</p>
@@ -108,13 +143,20 @@
                 <div class="small-card__price">
                     <span>22€</span>
                 </div>
-            </div><div class="small-card">
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+            <div class="small-card small-card--3">
                 <div class="small-card__name">
                     <h3>Millefeuille croustillant</h3>
                     <p>Myrtilles et pâte d’amande</p>
                 </div>
                 <div class="small-card__price">
                     <span>23€</span>
+                </div>
+                <div class="small-card--selected">
+                    <i class="fas fa-check-circle"></i>
                 </div>
             </div>
 
@@ -132,6 +174,6 @@
         <li><i class="fas fa-utensils fa-fw fa-sm"></i>Proposer un restaurant</li>
         <li><i class="fas fa-hands-helping fa-fw fa-xs"></i>Devenir partenaire</li>
         <li>Mentions légales</li>
-        <li>Contact</li>
+        <li><a href="mailto:antoine.gourdon91@gmail.com">Contact</a></li>
     </ul>
 </footer>

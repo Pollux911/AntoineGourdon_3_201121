@@ -6,3 +6,13 @@ $color-grey: #F6F6F6;
 $small: 768px;  /* 3 BREAKPOINTS USED*/
 $medium: 1024px;
 $large: 1280px;
+
+$num-small-card: 4;  /*Menu Fadein Animation Vars*/
+$num-menu-parts: 3;
+$anim-dur: 0.75s;
+$anim-delay: $anim-dur / $num-small-card;
+$menu-delay: $anim-dur / $num-menu-parts;
+
+$num-icon: 3;  /*Loading Animation Vars*/
+$icon-dur: 1.5s;
+$icon-delay: $icon-dur / $num-icon / 2;

@@ -36,7 +36,8 @@
       border-radius: 5vw;
       padding: 6.5vw;
       margin-bottom: 6vw;
-      &:before {
+      position: relative;
+      &::before {                     /*Bullets on the left of the elements*/
         content: counter(li);
         list-style-position: outside;
         color: white;
@@ -55,13 +56,29 @@
         color:#7E7E7E;
         padding-right: 9vw;
         }
+
       &:hover, &:active{
         background: pastel($color-primary);
         i{
           color: $color-primary;
         }
       }
-
+      &::after{      /*Shadow on hover or active behind operating elements*/
+        content: '';
+        position: absolute;
+        border-radius: 5vw;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        box-shadow: 11px 9px 12px 5px rgba(42,42,42,0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &:active::after, &:hover::after{
+        opacity: 1;
+      }
     }
   }
 }

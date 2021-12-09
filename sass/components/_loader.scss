@@ -1,0 +1,62 @@
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-grey;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  animation: loading 3s forwards;
+  z-index: -1;
+  &__icon{
+    padding: 4vw;
+    color: $color-primary;
+    animation: icon-load $icon-dur ease-in-out 2 forwards;
+    @for $i from 1 through $num-icon {
+      &--#{$i} {
+        animation-delay: $icon-delay * $i;
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0%{
+    opacity: 0.75;
+    z-index: 6;
+  }
+
+  80%{
+    opacity: 0.75;
+  }
+  99%{
+    z-index: 6;
+  }
+  100%{
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes icon-load {
+  0%{
+    font-size: 0;
+    transform: rotate(25deg);
+  }
+
+  50%{
+    font-size: 10vw;
+    transform: rotate(-25deg);
+  }
+
+  100%{
+    font-size: 0;
+    transform: rotate(25deg);
+  }
+}
