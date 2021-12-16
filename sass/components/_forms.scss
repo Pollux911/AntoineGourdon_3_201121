@@ -11,6 +11,13 @@
     background: #EAEAEA;
     padding-left: 4vw;
     font-size: 4vw;
+    @include small{
+      font-size: 3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+      padding-left: 2vw;
+    }
     &::placeholder {
       color: #353535;
     }
@@ -18,6 +25,14 @@
   i{
     color:#353535;
     padding-left: 10vw;
+    font-size: 4vw;
+    @include small{
+      font-size: 3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+      padding-left: 2vw;
+    }
   }
 
 }

@@ -1,5 +1,11 @@
 .home-nav {
+  display: flex;
   justify-content: center;
+  img{
+    @include large{
+    margin: auto;
+    }
+  }
 }
 
 .intro{
@@ -9,20 +15,38 @@
   align-items: center;
   padding: 5vw 15vw;
   text-align: center;
-
   h1{
     font-size:6.5vw;
     margin-bottom: 0;
+    @include small{
+      font-size:3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+    }
   }
 
   p{
-    font-size: 4vw;
+    font-size: 5vw;
+    @include small{
+      font-size:3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+    }
   }
 }
 
 .operating{
   h2 {
     @include base-margin;
+    font-size: 6vw;
+    @include small{
+      font-size: 3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+    }
   }
   ol {
     list-style: none;
@@ -37,6 +61,16 @@
       padding: 6.5vw;
       margin-bottom: 6vw;
       position: relative;
+      @include small{
+        font-size: 3vw;
+        padding: 3vw;
+        margin-bottom: 3vw;
+      }
+      @include large{
+        font-size: 1.5vw;
+        padding: 1.5vw;
+        margin-bottom: 1.5vw;
+      }
       &::before {                     /*Bullets on the left of the elements*/
         content: counter(li);
         list-style-position: outside;
@@ -51,10 +85,27 @@
         border-radius: 15vw;
         margin-left: -4vw;
         transform: translateX(-6vw);
+        @include small{
+          font-size: 2vw;
+          width: 3.5vw;
+          height: 3.5vw;
+          line-height: 3.5vw;
+          margin-left: 2vw;
+        }
+        @include large{
+          font-size: 1vw;
+          width: 1.75vw;
+          height: 1.75vw;
+          line-height: 1.75vw;
+          margin-left: 4vw;
+        }
       }
       i{
         color:#7E7E7E;
         padding-right: 9vw;
+        @include large{
+          padding-right: 3vw;
+        }
         }
 
       &:hover, &:active{
@@ -91,6 +142,12 @@
     @include base-margin;
     margin-top: 0;
     padding-top: 10vw;
+    @include small{
+      font-size: 3vw;
+    }
+    @include large{
+      font-size: 1.5vw;
+    }
   }
 
 }

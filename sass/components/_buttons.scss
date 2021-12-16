@@ -6,9 +6,18 @@
   border-radius: 10vw;
   padding: 5vw;
   color: white;
+  font-size: 4vw;
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  @include small{
+    font-size:2vw;
+    padding: 2.5vw;
+  }
+  @include large{
+    font-size: 1.5vw;
+    padding: 2vw;
+  }
   &--shadow{
     box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.2);
   }
@@ -37,6 +46,20 @@
 
 .btn-order{
   display: block;
-  margin: 10vw auto 0 auto;
+  margin: 2vw auto 0 auto;
   padding: 4vw 14vw;
+  @include small{
+    font-size: 3vw;
+    padding: 3vw 10vw;
+  }
+  @include medium{
+    font-size: 2vw;
+    padding: 1.5vw 5vw;
+    margin: 0 auto 0 auto;
+  }
+  @include large{
+    font-size: 1vw;
+    padding: 1vw 2.5vw;
+    margin: 0 auto 0 auto;
+  }
 }

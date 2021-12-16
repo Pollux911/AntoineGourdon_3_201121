@@ -1,15 +1,32 @@
 .card-container{
   @include base-margin;
   margin-right: 6vw;
+  @include small{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
   .card{
     background: white;
-    height: 251px;
+    height: 67vw;
     width: 100%;
     border-radius: 5vw;
     position: relative;
     box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.2);
     margin-bottom: 6vw;
     z-index: 0;
+    @include small{
+      height: 35vw;
+      width: 48%;
+      border-radius: 2.5vw;
+    }
+    @include large{
+      height: 17.5vw;
+      width: 48%;
+      border-radius: 2.5vw;
+    }
     a, a:visited{
       text-decoration: none;
       color: black;
@@ -25,6 +42,10 @@
         object-position: bottom;
         border-radius: 5vw 5vw 0 0;
         z-index: 1;
+        @include small{
+          object-position: center;
+          border-radius: 2.5vw 2.5vw 0 0;
+        }
       }
     }
     .card-body{
@@ -33,16 +54,20 @@
       align-items: center;
       height: 30%;
       &__card-name{
-        padding-top: 3vw ;
+        padding-top: 2vw;
         h3,p{
           padding: 0 0 1vw 3vw;
           margin:0;
+          font-size: 4.5vw;
+          @include small{
+            font-size:3vw;
+          }
+          @include large{
+            font-size: 1.5vw;
+          }
         }
       }
-
     }
-
-
     &--new {
       background: $color-tertiary;
       width: 22vw;
@@ -55,16 +80,33 @@
       top: 5vw;
       right:5vw;
       border-radius: 0.5vw;
+      @include small{
+        width: 11vw;
+        height: 4.5vw;
+        top: 2.5vw;
+        right: 2.5vw;
+      }
+      @include large{
+        width: 5.5vw;
+        height: 2.25vw;
+        top: 1.25vw;
+        right: 1.25vw;
+      }
       span{
         color: darksaturated($color-tertiary);
-        font-size: 4vw;
+        font-size: 5vw;
+        @include small{
+          font-size: 2.5vw;
+        }
+        @include large{
+          font-size: 1.25vw;
+        }
       }
    }
-
   }
 }
 
-.card:nth-child(0n+2){    /*Photo positioning*/
+.card:nth-child(0n+2){    /*Photo positioning on 2nd restaurant*/
   img{
     object-position: 50% 60%;
   }
@@ -76,9 +118,22 @@
   align-items: flex-end;
   background: white;
   border-radius: 4vw;
-  /*padding: 3vw 3vw;*/
+  overflow: hidden;
   padding: 0;
   margin: 0 4vw 4vw 4vw;
+  @include small{
+    margin: 0 6vw 3vw 6vw;
+    border-radius: 3vw;
+  }
+  @include medium{
+    margin: 0 3vw 1.5vw 3vw;
+    border-radius: 1.5vw;
+  }
+  @include large{
+    margin: 0 1.5vw 0.75vw 1.5vw;
+    border-radius: 1.5vw;
+  }
+
 
   &__name{
     width: 100%;
@@ -88,10 +143,16 @@
   }
   h3, &__price{
     padding: 3vw 3vw;
+    @include small{
+      padding: 0 0 1.5vw 1.5vw;
+    }
+    @include medium{
+      padding: 0 0 0 1.5vw;;
+    }
+
   }
   h3, p{
     margin: 0;
-    padding-right: 0;
     display: block;
     width: 100%;
     white-space: nowrap;
@@ -103,40 +164,87 @@
     padding-bottom: 1vw;
     font-size: 5vw;
     margin-right: 0;
+    @include small{
+      font-size: 2.5vw;
+    }
+    @include medium{
+      font-size: 1.5vw;
+    }
   }
   p{
     font-size: 4vw;
     padding: 0 0 3vw 3vw;
     margin-right: 0;
-
+    @include small{
+      font-size: 2vw;
+      padding: 0 0 1.5vw 1.5vw;
+    }
+    @include medium{
+      font-size: 1.5vw;
+      padding: 0 0 1.5vw 1.5vw;
+    }
   }
+
   &__price{
     padding-right: 2vw;
     span{
       font-weight: bold;
+      font-size: 4vw;
+      @include small{
+        font-size: 2vw;
+      }
+      @include medium{
+        font-size: 1.5vw;
+      }
+      @include large{
+        font-size: 1.1vw;
+      }
     }
   }
   &--selected{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     width: 0;
-    height: 17vw;
+    height: 18vw;
     background: $color-tertiary;
     margin: 0;
     padding: 0;
     border-radius: 0 4vw 4vw 0;
     color: white;
     font-size: 5vw;
-    z-index: 3;
-    transition: width 0.3s ease-in-out;      /*Selected animation */
+    transition: width 0.3s ease-in-out; /*Selected animation */
+    @include small{
+      height: 10vw;
+      font-size: 3vw;
+      border-radius: 0 3vw 3vw 0;
+    }
+    @include medium{
+      height: 7vw;
+      font-size: 1.5vw;
+      border-radius: 0 1.5vw 1.5vw 0;
+    }
+    @include large{
+      height: 6vw;
+      font-size: 0.75vw;
+      border-radius: 0 1.5vw 1.5vw 0;
+    }
   }
   &:hover .small-card--selected, &:active .small-card--selected{
     width: 17vw;
-
-  }
-  &:hover .small-card--selected i, &:active .small-card--selected i{
-    animation: spin 0.4s forwards ease-in-out;
+    @include small{
+      width: 13vw;
+    }
+    @include medium{
+      width: 10vw;
+    }
+    @include large{
+      width: 7vw;
+    }
+    i{
+      animation: spin 0.4s both ease-in-out;
+    }
   }
 
 }
@@ -145,9 +253,13 @@
   0%
   {
     transform: rotate(0);
+    z-index: 3;
+    opacity: 1;
   }
   100%{
     transform: rotate(360deg);
+    opacity: 1;
+    z-index: 3;
   }
 }
 
@@ -159,8 +271,12 @@
   margin-right: 3vw;
   z-index: auto;
 }
+
 .fa-stack-1x{
-  font-size: 4vw;
+  font-size: 6vw;
+  @include small{
+    font-size: 4vw;
+  }
 }
 
 .empty-heart{
@@ -174,13 +290,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 5;
+  overflow: visible;
   &:hover, &active {
-    animation: fill 0.3s 0.2s forwards;
+    animation: fill 0.4s 0.2s forwards 1 normal running;
   }
   &:hover + .empty-heart, &active + .empty-heart{
     opacity: 0;
   }
-
 }
 
 @keyframes fill {                   /* Heart Animation*/
@@ -189,7 +305,7 @@
     transform: scale(0);
   }
   25% {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   80%
@@ -199,5 +315,6 @@
   100% {
     opacity: 1;
     transform: scale(1);
+    z-index: 3;
   }
 }
