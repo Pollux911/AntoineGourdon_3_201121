@@ -14,9 +14,13 @@
     font-size:2vw;
     padding: 2.5vw;
   }
-  @include large{
+  @include medium{
     font-size: 1.5vw;
-    padding: 2vw;
+    padding: 1.5vw;
+  }
+  @include large{
+    font-size: 1vw;
+    padding: 1.5vw;
   }
   &--shadow{
     box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.2);
@@ -41,6 +45,12 @@
   }
   &:active::before{
     opacity: 1;
+  }
+  &:hover, &:active{
+    background-image:
+            linear-gradient(to bottom right,
+            lighten($color-secondary, 7.5%) 10%,
+            lighten($color-primary, 7.5%));
   }
 }
 

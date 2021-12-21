@@ -1,11 +1,6 @@
 .home-nav {
   display: flex;
   justify-content: center;
-  img{
-    @include large{
-    margin: auto;
-    }
-  }
 }
 
 .intro{
@@ -15,43 +10,56 @@
   align-items: center;
   padding: 5vw 15vw;
   text-align: center;
-  h1{
+  h2{
     font-size:6.5vw;
     margin-bottom: 0;
     @include small{
       font-size:3vw;
     }
-    @include large{
+    @include medium{
       font-size: 1.5vw;
     }
   }
-
   p{
     font-size: 5vw;
     @include small{
       font-size:3vw;
     }
-    @include large{
+    @include medium{
       font-size: 1.5vw;
     }
   }
 }
 
 .operating{
+
   h2 {
     @include base-margin;
     font-size: 6vw;
     @include small{
       font-size: 3vw;
     }
-    @include large{
+    @include medium{
       font-size: 1.5vw;
+    }
+    @include large{
+      margin-left: 10vw;
     }
   }
   ol {
     list-style: none;
     counter-reset: li;
     padding: 0 7vw 0 7vw;
+    @include medium{
+      display: flex;
+      justify-content: space-between;
+      margin: 2vw auto 5vw auto;
+      padding: 0;
+      max-width: 80vw;
+    }
+    @include large{
+      max-width: 70vw;
+    }
 
     li {
       counter-increment: li;
@@ -66,10 +74,18 @@
         padding: 3vw;
         margin-bottom: 3vw;
       }
-      @include large{
+      @include medium{
         font-size: 1.5vw;
-        padding: 1.5vw;
-        margin-bottom: 1.5vw;
+        padding: 2.5vw;
+        margin: 0;
+        float: left;
+        display: inline-block;
+        border-radius: 2.5vw;
+      }
+      @include large{
+        font-size: 1.2vw;
+        padding: 2vw;
+        border-radius: 1.5vw;
       }
       &::before {                     /*Bullets on the left of the elements*/
         content: counter(li);
@@ -92,21 +108,26 @@
           line-height: 3.5vw;
           margin-left: 2vw;
         }
-        @include large{
+        @include medium{
           font-size: 1vw;
-          width: 1.75vw;
-          height: 1.75vw;
-          line-height: 1.75vw;
-          margin-left: 4vw;
+          width: 2vw;
+          height: 2vw;
+          line-height: 2vw;
+          margin-left: 0;
+          position: absolute ;
+          left: 4.5vw;
         }
       }
       i{
         color:#7E7E7E;
         padding-right: 9vw;
-        @include large{
+        @include medium{
           padding-right: 3vw;
         }
+        @include large{
+          padding-right: 1.5vw;
         }
+      }
 
       &:hover, &:active{
         background: pastel($color-primary);
@@ -138,16 +159,24 @@
   background: $color-grey;
   margin-bottom: 0;
   padding-bottom: 10vw;
+  @include medium{
+    padding-bottom: 0;
+  }
+
   h2 {
     @include base-margin;
     margin-top: 0;
     padding-top: 10vw;
     @include small{
       font-size: 3vw;
+      padding-top: 5vw;
+    }
+    @include medium{
+      font-size: 1.5vw;
+      padding-top: 2.5vw;
     }
     @include large{
-      font-size: 1.5vw;
+      margin-left: 10vw;
     }
   }
-
 }

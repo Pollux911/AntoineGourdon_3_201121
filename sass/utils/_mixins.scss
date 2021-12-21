@@ -1,4 +1,4 @@
-@mixin small {                 /*RESPONSIVE MIXINS W/ 3 BREAKPOINTS : 768px, 1024px, 1280px*/
+@mixin small {                 /*RESPONSIVE MIXINS W/ 3 BREAKPOINTS : 768px, 1024px, 1440px*/
   @media only screen and (min-width: $small){
     @content;
   }
@@ -20,6 +20,7 @@
 }
 @mixin title-font {
   font-family: 'Shrikhand', cursive;
+  font-weight: normal;
 }
 
 @mixin base-margin {
