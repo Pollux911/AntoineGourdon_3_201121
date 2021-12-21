@@ -9,7 +9,7 @@
 
 @function darksaturated($clr){
   $hue: hue($clr);
-  $sat: 90%;
+  $sat: 100%;
   $light: 30%;
   $drkstrtd: hsl($hue,$sat,$light);
 

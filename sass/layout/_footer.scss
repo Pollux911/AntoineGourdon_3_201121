@@ -13,6 +13,10 @@ footer{
       width: 15%;
       padding-top: 3vw;
     }
+    @include large{
+      width: 12%;
+      padding-top: 3vw;
+    }
     }
   ul{
     padding-left: 6vw;
@@ -20,6 +24,7 @@ footer{
     margin: 3vw 0 0 0;
     @include medium{
       margin: 1.5vw 0 0 0;
+      padding-bottom: 1.5vw;
     }
   }
   li{
@@ -33,6 +38,10 @@ footer{
     @include medium{
       font-size: 1.5vw;
       padding-bottom: 1vw;
+    }
+    @include large{
+      font-size: 1.2vw;
+      padding-bottom: 0.8vw;
     }
 
     i{

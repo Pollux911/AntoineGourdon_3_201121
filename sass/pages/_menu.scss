@@ -19,14 +19,18 @@
       @include medium{
         height: 35vw;
       }
+      @include large{
+        height: 30vw;
+      }
     }
   }
-  &--menu2img{
-    height: 68vw;
+  &--menu2img{                /*Menu 2 image positioning*/
+    height: 10vw;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: 0 -27vw;
     @include small{
       height: 50vw;
+      object-position: 50% 50%;
     }
     @include medium{
       height: 40vw;
@@ -46,10 +50,16 @@
     border-radius: 5vw 5vw;
     padding-bottom: 10vw;
   }
+  @include large{
+    margin: 0 20vw 0 20vw;
+    bottom: 10vh;
+    border-radius: 2.5vw 2.5vw;
+    padding-bottom: 2.5vw;
+  }
 }
 .menu__heading{
   @include title-font;
-  padding: 0 10vw 0 6vw;
+  padding: 0 6vw 0 6vw;
   border-radius: 10vw 10vw 0 0;
   font-size: 3.5vw;
   width: 100%;
@@ -57,11 +67,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  h1{
+    font-weight: normal;
+  }
   @include small{
     font-size: 3vw;
   }
   @include medium{
     font-size: 2vw;
+    padding: 0 6vw 0 4vw;
+  }
+  @include large{
+    font-size: 1.2vw;
     padding: 0 6vw 0 4vw;
   }
   i{
@@ -71,6 +88,9 @@
     }
     @include medium{
       font-size: 3vw;
+    }
+    @include large{
+      font-size: 2vw;
     }
   }
 }
@@ -84,6 +104,7 @@
     }
   }
   h2{
+    font-weight: 400;
     margin: 6vw 0 4vw 6vw;
     padding: 0;
     font-size: 4vw;
@@ -99,8 +120,13 @@
       font-size: 1.5vw;
       border-image: linear-gradient(to right, $color-tertiary 5%, $color-grey 5%) 100% 1;
     }
+    @include large{
+      margin: 1.5vw 0 1vw 4vw;
+      font-size: 1.2vw;
+    }
   }
 }
+
 .small-card{              /*Fadein animation @ loading*/
   opacity: 0;
   animation: fadein $anim-dur forwards cubic-bezier(.58,.19,.42,.83);
@@ -115,10 +141,8 @@
     opacity: 0;
     transform: translate(0, 5vh);
   }
-
   100%{
     opacity: 1;
     transform: translate(0, 0);
   }
-  
 }
