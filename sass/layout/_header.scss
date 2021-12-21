@@ -4,27 +4,25 @@ nav {
   align-items: center;
   padding: 0;
   width: 100%;
-
-  h1{
-    margin: 2vh auto;
-    @include title-font;
-    font-size: 8.5vw;
-    @include small{
-      font-size: 5vw;
-    }
-    @include medium{
-      font-size: 4vw;
-    }
-
-  }
   a {
     text-decoration: none;
     &:visited{
       text-decoration: none;
       color: black;
+      }
+    h1{
+      color: black;
+      margin: 2vh auto;
+      @include title-font;
+      font-size: 8.5vw;
+      @include small{
+        font-size: 5vw;
+      }
+      @include medium{
+        font-size: 4vw;
+      }
     }
   }
-
   .back-btn{
     position: absolute;
     left: 6vw;
